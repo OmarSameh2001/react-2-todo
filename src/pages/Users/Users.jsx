@@ -16,7 +16,7 @@ function Users() {
     }
 
     function handleSearch(email) {
-        const filteredUsers = users.filter((user) => user.email.includes(email));
+        const filteredUsers = users.filter((user) => user.email.toLowerCase().includes(email.toLowerCase()));
         if (filteredUsers.length === 0) {
             alert('No users found');
             return
